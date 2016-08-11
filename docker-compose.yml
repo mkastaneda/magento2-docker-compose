@@ -14,7 +14,7 @@ appdata:
 #    - ~/.composer:/var/www/.composer
     - ./www:/srv/www
 phpfpm:
-  image: jcastaneda/dev-php-fpm-7.0.8:1.1
+  image: jcastaneda/dev-php-fpm-7.0.8:1.2
   links:
     - db
     - redis
