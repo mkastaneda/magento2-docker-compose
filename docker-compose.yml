@@ -11,7 +11,8 @@ appdata:
   image: tianon/true
   volumes:
     - /srv/www
-#    - ~/.composer:/var/www/.composer
+    - ~/.composer:/var/www/.composer
+    - ~/.composer:/root/.composer
     - ./www:/srv/www
 phpfpm:
   image: mageinferno/magento2-php:7.0.8-fpm-3
@@ -53,9 +54,9 @@ setup:
     - M2SETUP_ADMIN_EMAIL=dummy@gmail.com
     - M2SETUP_ADMIN_USER=magento2
     - M2SETUP_ADMIN_PASSWORD=magento2
-    - M2SETUP_VERSION=2.1.0
+    - M2SETUP_VERSION=2.1.1
     - M2SETUP_USE_SAMPLE_DATA=false
-    - M2SETUP_USE_ARCHIVE=true
+    - M2SETUP_USE_ARCHIVE=false
 phpmyadmin:
   image: phpmyadmin/phpmyadmin
   links:
